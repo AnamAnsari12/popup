@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+
+
+
+body{
+    background-color: #374151;
+}
+         .mainboxpop { 
+           
+            position: fixed;
+            /* margin: auto; */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%; 
+            max-width: 700px; 
+            /* background: #E1722A; */
+            /* display: none; */
+           
+
+        } 
+
+        .centerpopupbox {
+            display: flex;
+             flex-direction: column;
+             gap: 30px;
+            border-radius: 10px;
+          background: #FFF;
+        box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.06);
+         /* padding-top: 10px; */
+         padding: 20px;
+         
+        }
+        
+     
+        .popupnuttoncounter{
+             
+                    border-radius: 5px;
+               border: 1px solid #E5E7EB;
+               background: #FFF; 
+               position: absolute;
+               /* display: inline-flex; */
+               display: flex;
+             align-items: center;
+              margin-left: 70px;
+              
+               
+        }
+        .popupbtnphasetwo{
+            color: #B8BBBF;
+               font-family: "Red Hat Display";
+                 font-size: 16px;
+                font-style: normal;
+                  font-weight: 700;
+                 line-height: normal;
+               text-transform: capitalize;
+                 border: none;
+                background: transparent;
+        }
+        .popupimg{
+            /* height: 80px; */
+          /* align-self: stretch; */
+          border-radius: 8px;
+          width: 100%;
+        
+        }
+
+
+        .mainhedingpopup{
+            color: var(--Neutral-Neutral-700, #374151);
+                font-family: "Red Hat Display";
+                font-size: 18px;
+              font-style: normal;
+               font-weight: 600;
+                 line-height: 24px; /* 133.333% */
+             text-transform: capitalize;
+        }
+
+        .nameofproductpopup{
+            color: var(--Neutral-Neutral-700, #374151);
+             font-family: "Red Hat Display";
+             font-size: 16px;
+               font-style: normal;
+             font-weight: 400;
+           line-height: 24px; /* 150% */
+        text-transform: capitalize;
+        }
+        .btnandtext{
+            margin-top: 10px;
+        }
+        .twobtnwrapper{
+            display: flex;
+          padding: 10px 30px;
+         flex-direction: row;
+         align-items: center;
+        gap: 10px;
+         /* flex: 1 0 0; */
+         width: 100%;
+         height: 70%;
+               }
+           .cancelbtnpopup{
+             width: 100%;
+            height: 40px;
+            border-radius: 4px;
+             border: 1px solid var(--Button-Gradient, #AC5821);
+                background: var(--Neutral-Neutral-0, #FFF);
+                overflow: hidden;
+                  text-align: center;
+              text-overflow: ellipsis;
+
+             
+                font-family: "Red Hat Display";
+                    font-size: 12px;
+                 font-style: normal;
+                  font-weight: 500;
+                line-height: 20px; /* 166.667% */
+                     letter-spacing: 2px;
+                   text-transform: uppercase;
+                   color: #E1722A;
+
+           }
+           .additombtnpopup{
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+              background: var(--Button-Gradient, linear-gradient(90deg, #AC5821 0%, #E1722A 100%));
+              overflow: hidden;
+               color: var(--Neutral-Neutral-0, #FFF);
+                  text-align: center;
+                 text-overflow: ellipsis;
+
+                    /* CTA/12px: Medium */
+                      font-family: "Red Hat Display";
+                       font-size: 12px;
+                     font-style: normal;
+                        font-weight: 500;
+                   line-height: 20px; /* 166.667% */
+                      letter-spacing: 2px;
+                     text-transform: uppercase;
+                       border: none;
+                       height: 40px;
+           }
+           
+        /* .popupimageline{
+            gap:14px
+        }
+
+       .popupsecondlineimage{
+        gap: 14px;
+       } */
+       @media (max-width: 767px) {
+            .mainboxpop {
+                width: 80%;
+                background: transparent;
+               
+            }
+            .centerpopupbox {
+                padding: 10px;
+            }
+            .popupimageline .col
+             {
+                flex-basis: 50%;
+            }
+            .popupimg {
+                height: auto;
+                margin-top: 20px;
+            }
+
+            .popupnuttoncounter{
+               margin-left: 50px;
+       }
+        }
+
+        /* .bookshelf {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+} */
+.bookshelfbtncnt{
+    margin-left: 90px;
+}
+.kuchbhileloyr {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+    </style>
+</head>
+<body>
+    <!-- <button onclick="togglePopup()">Show Popup</button> -->
+    
+
+    <div class="mainboxpop" id="popup">
+        <div class="centerpopupbox">
+            <p class="mainhedingpopup">Add Furniture</p>
+
+            <div class="row popupimageline">
+                <div class="col">
+                    <img src="./Images/CupBoard.png"  class="popupimg"/>
+                    <div class="row btnandtext">
+                        <div class="col kuchbhileloyr">
+                            <div class="col nameofproductpopup">
+                                <span class="nameofproductpopup">cupBoard</span>
+                                </div>
+                             <div class=" popupnuttoncounter bookshelfbtncnt">
+                            <button class="popupbtnphasetwo">+</button>
+                            <span>0</span>
+                            <button class="popupbtnphasetwo">-</button>
+                        </div> 
+                        </div>
+                        
+
+                        
+                    </div>
+                </div>
+            
+                <div class="col">
+                    <img src="./Images/table.png"  class="popupimg"/>
+                    <div class="row btnandtext">
+                        <div class="col kuchbhileloyr">
+                            <div class="col nameofproductpopup">
+                                <span class="nameofproductpopup">Table</span>
+                                </div>
+                             <div class=" popupnuttoncounter bookshelfbtncnt">
+                            <button class="popupbtnphasetwo">+</button>
+                            <span>0</span>
+                            <button class="popupbtnphasetwo">-</button>
+                        </div> 
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col"><img src="./Images/Chair.png" class="popupimg"/>
+                    <div class="row  btnandtext">
+                        <div class="col kuchbhileloyr">
+                            <div class="col nameofproductpopup">
+                                <span class="nameofproductpopup">Chair</span>
+                                </div>
+                             <div class=" popupnuttoncounter bookshelfbtncnt">
+                            <button class="popupbtnphasetwo">+</button>
+                            <span>0</span>
+                            <button class="popupbtnphasetwo">-</button>
+                        </div> 
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+                <div class="col"><img src="./Images/couch.png" class="popupimg"/>
+                    <div class="row btnandtext">
+                        <div class="col kuchbhileloyr">
+                            <div class="col nameofproductpopup">
+                                <span class="nameofproductpopup">couch</span>
+                                </div>
+                             <div class=" popupnuttoncounter bookshelfbtncnt">
+                            <button class="popupbtnphasetwo">+</button>
+                            <span>0</span>
+                            <button class="popupbtnphasetwo">-</button>
+                        </div> 
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+                
+            </div>
+
+
+            <!-- 2 row -->
+
+            <div class="row popupimageline">
+                <div class="col">
+                    <img src="./Images/Drawers.png"  class="popupimg"/>
+                    <div class="row btnandtext">
+                       
+                        <div class="col kuchbhileloyr">
+                            <div class="col nameofproductpopup">
+                                <span class="nameofproductpopup">Drawers</span>
+                                </div>
+                             <div class=" popupnuttoncounter bookshelfbtncnt">
+                            <button class="popupbtnphasetwo">+</button>
+                            <span>0</span>
+                            <button class="popupbtnphasetwo">-</button>
+                        </div> 
+                        </div>
+                        
+                    </div>
+                </div>
+            
+                <div class="col">
+                    <img src="./Images/BookShelf.png"  class="popupimg"/>
+                    <div class="row btnandtext">
+                        <div class="col kuchbhileloyr">
+                            <div class="col nameofproductpopup">
+                                <span class="nameofproductpopup">Book shelf</span>
+                                </div>
+                             <div class=" popupnuttoncounter bookshelfbtncnt">
+                            <button class="popupbtnphasetwo">+</button>
+                            <span>0</span>
+                            <button class="popupbtnphasetwo">-</button>
+                        </div> 
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col"><img src="./Images/Door.png" class="popupimg"/>
+                    <div class="row  btnandtext">
+                        <div class="col kuchbhileloyr">
+                            <div class="col nameofproductpopup">
+                                <span class="nameofproductpopup">Door</span>
+                                </div>
+                             <div class=" popupnuttoncounter bookshelfbtncnt">
+                            <button class="popupbtnphasetwo">+</button>
+                            <span>0</span>
+                            <button class="popupbtnphasetwo">-</button>
+                        </div> 
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+                <div class="col"><img src="./Images/bed.png" class="popupimg"/>
+                    <div class="row btnandtext">
+                        <div class="col kuchbhileloyr">
+                            <div class="col nameofproductpopup">
+                                <span class="nameofproductpopup">Bed</span>
+                                </div>
+                             <div class=" popupnuttoncounter bookshelfbtncnt">
+                            <button class="popupbtnphasetwo">+</button>
+                            <span>0</span>
+                            <button class="popupbtnphasetwo">-</button>
+                        </div> 
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+                
+            </div>
+           
+            <div class="row twobtnwrapper">
+                <div class="col"><button class=" cancelbtnpopup">cancel</button></div>
+                <div class="col"><button   class="additombtnpopup">add now</button></div>
+                
+
+            </div>
+        </div>
+    </div>
+    
+    <!-- js -->
+
+    <!-- <script>
+        function togglePopup() {
+            var popup = document.getElementById('popup');
+            if (popup.style.display === 'none') {
+                popup.style.display = 'block';
+            } else {
+                popup.style.display = 'none';
+            }
+        }
+    </script> -->
+
+
+    
+    
+</body>
+</html>
